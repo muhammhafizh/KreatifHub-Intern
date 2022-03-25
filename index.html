@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kreatifhub Intern</title>
+    <style>
+        .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+    </style>
+</head>
+<body>
+
+    <!---Navigation--->
+    <nav class="container navbar navbar-expand-lg navbar-primary bg-light">
+        <div class="container-fluid">
+          <img src="./assets/Ic_KreatifHub.png" style="width: 100px;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" style="color:rgb(65, 123, 197); font-size:28px;"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">CARI PROJECT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DAFTAR TALENT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MARKET PLACE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">KREATIF ACADEMY</a>
+              </li>
+            </ul>
+            <ul class="nav justify-content-end">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ID
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">EN</a></li>
+                      <li><a class="dropdown-item" href="#">JPN</a></li>
+                      <li><a class="dropdown-item" href="#">PLD</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-warning me-2" type="submit">MASUK</button>
+              <button type="button" class="btn btn-warning text-white">DAFTAR</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Section -->
+		<section id="header" class="container mt-5 pt-5 header">
+      <div class="bg-light">
+        <div class="row d-flex">
+          <div class="col-md-6 pengenalan">
+            <h2>Memudahkan akses memesan jasa freelancer industri Kreatif</h2>
+            <p>
+              KreatifHub memiliki misi untuk menghubungkan talent kreatif
+              dengan pencari talent di industri kreatif Indonesia.
+            </p>
+            <p>Daftarkan jasa kamu sekarang!</p>
+            <div class="btn">
+              <button class="btn btn-primary btn-lg mt-3 me-3 rounded-pill">
+                Penyedia Jasa Individu
+              </button>
+              <button class="btn btn-primary btn-lg mt-3 me-3 rounded-pill">Agensi</button>
+            </div>
+          </div>
+          <div class="col-md-6 mt-sm-5 d-flex justify-content-center">
+            <img
+              src="assets/Il_kayla.png"
+              width="70%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor -->
+    <section id="talent" class="container mt-5 pt-5">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="assets/Il_publikasi.png" class="rounded img-fluid" style="width: 50%;" />
+          <h1 class="mt-3">Publikasi Gratis</h1>
+          <p>
+            Setiap Minggu KreatifHub memilih jasa terbaik untuk
+            dipublikasikan.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/Il_komisi.png" class="rounded img-fluid" style="width: 50%;" />
+          <h1 class="mt-3">Bebas Biaya Komisi</h1>
+          <p>
+            Dana 100% diteruskan ke penyedia jasa. jika sudah menyelesaikan
+            pesanan.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/Il_klien.png" class="rounded img-fluid" style="width: 50%;" />
+          <h1 class="mt-3">Klien Terpercaya</h1>
+          <p>
+            Terhindar dari ghostingan klien karna pesanan yang masuk dari
+            klien terpercaya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="container mt-5 pt-5 mb-5">
+      <div class="text-center">
+        <h1 class="fs-2 fw-bolder">
+          Ikuti Video singkat ini untuk daftarin jasa kamu di KreatifHub
+        </h1>
+      </div>
+      <div class="text-center mt-2">
+        <a href="https://www.youtube.com/c/KreatifHub" target="_blank">
+          <img src="assets/Thumb_youtube.png" alt="Thumb_youtube" style="width: 70%;"/>
+        </a>
+      </div>
+    </section>
+
+    <!-- dana -->
+    <section class="container mt-5 pt-5 mb-5">
+      <div class="text-center">
+        <h1>Mudah tarik dana di KreatifHub</h1>
+        <img src="assets/Banner.png" alt="baner" class="img-fluid" />
+      </div>
+    </section>
+
+    <!--Caraousel-->
+    <div class="container">
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                <div class="MultiCarousel-inner">
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/fotografi.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/videografi.png" alt="slider" style="width: 100%;" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/desain.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/writing.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/writing.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/musik-dan-audio.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/content-creator.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/editing.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                          <img src="assets/slider/beauty.png" alt="slider" style="width: 100%;"/>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary leftLst"><</button>
+                <button class="btn btn-primary rightLst">></button>
+            </div>
+      </div>
+    </div>
+
+    <!--Join-->
+    <section class="container mt-5 pt-5 mb-5">
+      <div class="text-center">
+        <h1>Gabung dengan KreatifHub Sekarang</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center">Freelancer and Creative Professionals</h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="assets/ac_profesional.png" alt="" width="100%" />
+            </div>
+            <div class="col-lg-8">
+              <ul>
+                <li>Buat Iklan Project dan Dapatkan Lamaran dari Talent</li>
+                <li>Mengikuti Acara KreatifAcademy</li>
+                <li>Pesan Jasa dari Marketplace</li>
+                <li>Jual Jasa di Marketplace</li>
+                <li>Kirim Lamaran Project</li>
+                <li>Upload Portofolio</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-start">
+              <button class="btn btn-primary btn-md">Daftar Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <h2 class="text-center">Agensi dan Production House</h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="assets/ac_bisnis.png" alt="" width="100%" />
+            </div>
+            <div class="col-lg-8">
+              <ul>
+                <li>Buat Iklan Project dan Dapatkan Lamaran dari Talent</li>
+                <li>Kirim Lamaran Project</li>
+                <li>Buat Profil Bisnis dan Tambahkan Anggota Tim</li>
+                <li>Upload Portofolio Bisnis</li>
+                <li>Akses & Kelola Banyak Akun Anggota Tim</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-start">
+              <button class="btn btn-primary btn-md">Daftar Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    
+  <!--Footer-->
+  <footer class="footer bg-primary text-light pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-7">
+          <img
+            class="img-fluid img-logo rounded-3"
+            src="assets/footer/kreatif_footer.png"
+            alt="logo"
+          />
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <ul style="list-style: none;">
+            <li><h5 class="text-warning">MEMBERSHIP</h5></li> <li></li> <li></li>
+            <li>Daftar</li>
+            <li>Profil Saya</li>
+            <li>Pengaturan Akun</li>
+            <li>Pasang Iklan</li>
+            <li>Tingkatkan Membership</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <ul style="list-style: none;">
+            <li><h5 class="text-warning">KREATIFHUB</h5></li> <li></li> <li></li>
+            <li>Tentang Kami</li>
+            <li>Cari Project</li>
+            <li>Daftar Talent</li>
+            <li>Paket Bisnis</li>
+            <li>Syarat dan Ketentuan</li>
+            <li>Kebijakan Privasi</li>
+            <li>Kontak Kami</li>
+            <li>Bantuan (FAQ)</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-7">
+          <h5 class="text-warning">METODE PEMBAYARAN</h5>
+          <img
+            class="img-fluid img-pembayaran"
+            src="assets/footer/pay_method.png"
+            alt="pembayaran"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="footer-2" class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <span class="copyright"
+              >&copy; 2022 KreatifHub. All Rights Reserved.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <!--Script-->
+    <script src="js/bootstrap.js"></script>
+    <script>
+      $(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+    </script>
+    
+</body>
+</html>
